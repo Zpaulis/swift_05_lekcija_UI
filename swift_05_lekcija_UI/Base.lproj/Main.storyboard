@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="tWK-qd-JWD">
     <device id="retina5_9" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,36 +17,105 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Priecīgas Lieldienas!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VVd-LR-D1u">
-                                <rect key="frame" x="20" y="64" width="335" height="39"/>
+                                <rect key="frame" x="20" y="108" width="335" height="39"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="32"/>
                                 <color key="textColor" systemColor="systemYellowColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="picture" translatesAutoresizingMaskIntoConstraints="NO" id="iAk-qN-auw">
-                                <rect key="frame" x="20" y="123" width="335" height="281"/>
+                                <rect key="frame" x="20" y="167" width="335" height="281"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="twm-3k-YCc">
+                                <rect key="frame" x="30" y="468" width="315" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="vUZ-YM-99r"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="22"/>
+                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                <size key="titleShadowOffset" width="4" height="4"/>
+                                <state key="normal" title="Nospied podziņu!">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <buttonConfiguration key="configuration" style="plain" title="Nospied podziņu!">
+                                    <backgroundConfiguration key="background" cornerRadius="20" strokeWidth="20" strokeOutset="20">
+                                        <color key="backgroundColor" systemColor="systemPinkColor"/>
+                                    </backgroundConfiguration>
+                                    <fontDescription key="titleFontDescription" type="system" pointSize="22"/>
+                                    <color key="baseForegroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="nospiedPodzinuButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="3yv-9Q-0F5"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGreenColor"/>
                         <constraints>
                             <constraint firstItem="iAk-qN-auw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="07Y-Zv-Fnm"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iAk-qN-auw" secondAttribute="trailing" constant="20" id="19r-ay-SjF"/>
+                            <constraint firstItem="twm-3k-YCc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="6nV-O3-Ogf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="twm-3k-YCc" secondAttribute="trailing" constant="30" id="7DP-Dv-8MT"/>
                             <constraint firstItem="VVd-LR-D1u" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="NcA-hj-JRe"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="VVd-LR-D1u" secondAttribute="trailing" constant="20" id="YWP-K6-ni5"/>
                             <constraint firstItem="iAk-qN-auw" firstAttribute="top" secondItem="VVd-LR-D1u" secondAttribute="bottom" constant="20" id="fTX-Eq-TI5"/>
                             <constraint firstItem="VVd-LR-D1u" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="jiM-Oe-BIL"/>
+                            <constraint firstItem="twm-3k-YCc" firstAttribute="top" secondItem="iAk-qN-auw" secondAttribute="bottom" constant="20" id="suy-iV-Oxl"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="r9l-nk-x7P"/>
+                    <connections>
+                        <outlet property="nospiedPodzinuButton" destination="twm-3k-YCc" id="uam-3B-aoG"/>
+                        <segue destination="6q1-ul-gTO" kind="show" identifier="SecondViewControlerIdentifier" id="m0S-3x-t6d"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-6" y="80"/>
+            <point key="canvasLocation" x="-97" y="443"/>
+        </scene>
+        <!--Second View Controller-->
+        <scene sceneID="qiQ-9p-nDX">
+            <objects>
+                <viewController id="6q1-ul-gTO" customClass="SecondViewController" customModule="swift_05_lekcija_UI" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="rUm-Fn-a3G">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="Kqc-8w-HXs"/>
+                        <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7QY-FD-J6Y"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oEA-Po-NGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="777" y="443"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="wGu-dX-kJO">
+            <objects>
+                <navigationController id="tWK-qd-JWD" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="jaI-sd-WSm">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="qnW-bf-pOK"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="e8V-8L-8zA" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-972" y="444"/>
         </scene>
     </scenes>
     <resources>
         <image name="picture" width="500" height="281"/>
         <systemColor name="systemGreenColor">
             <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPinkColor">
+            <color red="1" green="0.17647058823529413" blue="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+        <systemColor name="systemPurpleColor">
+            <color red="0.68627450980392157" green="0.32156862745098042" blue="0.87058823529411766" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemYellowColor">
             <color red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
