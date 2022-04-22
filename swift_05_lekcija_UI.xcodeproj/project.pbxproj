@@ -13,9 +13,6 @@
 		7E147256280AF857009966E3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E147254280AF857009966E3 /* Main.storyboard */; };
 		7E147258280AF85A009966E3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7E147257280AF85A009966E3 /* Assets.xcassets */; };
 		7E14725B280AF85A009966E3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7E147259280AF85A009966E3 /* LaunchScreen.storyboard */; };
-		7E147266280AF85A009966E3 /* swift_05_lekcija_UITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E147265280AF85A009966E3 /* swift_05_lekcija_UITests.swift */; };
-		7E147270280AF85A009966E3 /* swift_05_lekcija_UIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14726F280AF85A009966E3 /* swift_05_lekcija_UIUITests.swift */; };
-		7E147272280AF85A009966E3 /* swift_05_lekcija_UIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E147271280AF85A009966E3 /* swift_05_lekcija_UIUITestsLaunchTests.swift */; };
 		7E75280B281346D7001E302E /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75280A281346D7001E302E /* SecondViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -46,10 +43,7 @@
 		7E14725A280AF85A009966E3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7E14725C280AF85A009966E3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7E147261280AF85A009966E3 /* swift_05_lekcija_UITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift_05_lekcija_UITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E147265280AF85A009966E3 /* swift_05_lekcija_UITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_05_lekcija_UITests.swift; sourceTree = "<group>"; };
 		7E14726B280AF85A009966E3 /* swift_05_lekcija_UIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = swift_05_lekcija_UIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		7E14726F280AF85A009966E3 /* swift_05_lekcija_UIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_05_lekcija_UIUITests.swift; sourceTree = "<group>"; };
-		7E147271280AF85A009966E3 /* swift_05_lekcija_UIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = swift_05_lekcija_UIUITestsLaunchTests.swift; sourceTree = "<group>"; };
 		7E75280A281346D7001E302E /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -82,8 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				7E14724D280AF857009966E3 /* swift_05_lekcija_UI */,
-				7E147264280AF85A009966E3 /* swift_05_lekcija_UITests */,
-				7E14726E280AF85A009966E3 /* swift_05_lekcija_UIUITests */,
 				7E14724C280AF857009966E3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -111,23 +103,6 @@
 				7E14725C280AF85A009966E3 /* Info.plist */,
 			);
 			path = swift_05_lekcija_UI;
-			sourceTree = "<group>";
-		};
-		7E147264280AF85A009966E3 /* swift_05_lekcija_UITests */ = {
-			isa = PBXGroup;
-			children = (
-				7E147265280AF85A009966E3 /* swift_05_lekcija_UITests.swift */,
-			);
-			path = swift_05_lekcija_UITests;
-			sourceTree = "<group>";
-		};
-		7E14726E280AF85A009966E3 /* swift_05_lekcija_UIUITests */ = {
-			isa = PBXGroup;
-			children = (
-				7E14726F280AF85A009966E3 /* swift_05_lekcija_UIUITests.swift */,
-				7E147271280AF85A009966E3 /* swift_05_lekcija_UIUITestsLaunchTests.swift */,
-			);
-			path = swift_05_lekcija_UIUITests;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -272,7 +247,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E147266280AF85A009966E3 /* swift_05_lekcija_UITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +254,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E147270280AF85A009966E3 /* swift_05_lekcija_UIUITests.swift in Sources */,
-				7E147272280AF85A009966E3 /* swift_05_lekcija_UIUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,7 +429,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -484,7 +456,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

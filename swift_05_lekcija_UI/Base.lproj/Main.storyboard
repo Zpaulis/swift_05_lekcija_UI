@@ -71,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-97" y="443"/>
+            <point key="canvasLocation" x="-90" y="443"/>
         </scene>
         <!--Second View Controller-->
         <scene sceneID="qiQ-9p-nDX">
@@ -80,14 +80,64 @@
                     <view key="view" contentMode="scaleToFill" id="rUm-Fn-a3G">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cqD-34-GXd">
+                                <rect key="frame" x="20" y="98" width="335" height="34"/>
+                                <attributedString key="attributedText">
+                                    <fragment content="Spēles nosaukums">
+                                        <attributes>
+                                            <font key="NSFont" size="24" name="ChalkboardSE-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sbX-tn-ceV">
+                                <rect key="frame" x="20" y="385.33333333333331" width="335" height="100"/>
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Team GO Rocket has invaded the world of Pokémon GO! Whether you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket and foil their plans.</string>
+                                        <attributes>
+                                            <font key="NSFont" size="18" name="TimesNewRomanPSMT"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="justified" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="29h-Hl-3zx">
+                                <rect key="frame" x="20" y="142" width="335" height="223.33333333333337"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="29h-Hl-3zx" secondAttribute="height" multiplier="3:2" id="mIK-vu-69x"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="Kqc-8w-HXs"/>
                         <color key="backgroundColor" systemColor="systemPurpleColor"/>
+                        <constraints>
+                            <constraint firstItem="Kqc-8w-HXs" firstAttribute="trailing" secondItem="29h-Hl-3zx" secondAttribute="trailing" constant="20" id="77f-dU-B3W"/>
+                            <constraint firstItem="sbX-tn-ceV" firstAttribute="leading" secondItem="Kqc-8w-HXs" secondAttribute="leading" constant="20" id="CVn-6Z-qo8"/>
+                            <constraint firstItem="sbX-tn-ceV" firstAttribute="top" secondItem="29h-Hl-3zx" secondAttribute="bottom" constant="20" id="Ia4-MV-OP0"/>
+                            <constraint firstItem="29h-Hl-3zx" firstAttribute="top" secondItem="cqD-34-GXd" secondAttribute="bottom" constant="10" id="KHc-vp-pak"/>
+                            <constraint firstItem="cqD-34-GXd" firstAttribute="leading" secondItem="Kqc-8w-HXs" secondAttribute="leading" constant="20" id="NJK-Fs-0kg"/>
+                            <constraint firstItem="Kqc-8w-HXs" firstAttribute="trailing" secondItem="cqD-34-GXd" secondAttribute="trailing" constant="20" id="PBV-W2-sj7"/>
+                            <constraint firstItem="cqD-34-GXd" firstAttribute="top" secondItem="Kqc-8w-HXs" secondAttribute="top" constant="10" id="YPP-Jk-orl"/>
+                            <constraint firstItem="29h-Hl-3zx" firstAttribute="leading" secondItem="Kqc-8w-HXs" secondAttribute="leading" constant="20" id="bRw-I6-2AR"/>
+                            <constraint firstItem="Kqc-8w-HXs" firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="sbX-tn-ceV" secondAttribute="bottom" constant="10" id="j7K-Gm-t3w"/>
+                            <constraint firstItem="Kqc-8w-HXs" firstAttribute="trailing" secondItem="sbX-tn-ceV" secondAttribute="trailing" constant="20" id="za8-hi-ArQ"/>
+                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7QY-FD-J6Y"/>
+                    <connections>
+                        <outlet property="gameDescriptionLabel" destination="sbX-tn-ceV" id="am1-ib-enH"/>
+                        <outlet property="gameScreenLabel" destination="29h-Hl-3zx" id="fSc-nf-27B"/>
+                        <outlet property="gameTitleLabel" destination="cqD-34-GXd" id="r17-hM-rqa"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="oEA-Po-NGz" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="777" y="443"/>
+            <point key="canvasLocation" x="776.79999999999995" y="442.61083743842369"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="wGu-dX-kJO">
