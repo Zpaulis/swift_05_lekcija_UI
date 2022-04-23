@@ -29,6 +29,17 @@ class ViewController: UIViewController {
     @IBAction func nospiedPodzinuButtonClicked(_ sender: Any) {
         self.performSegue(withIdentifier: "SecondViewControlerIdentifier", sender: self)
     }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "SecondViewControlerIdentifier" {
+            if let ctrl = segue.destination as? SecondViewController{
+                ctrl.gameTitle = "Pokemon GO"
+                ctrl.gameDescription = "Team GO Rocket has invaded the world of Pokémon GO! Whether you’re working on Special Research or just trying to rescue Shadow Pokémon, you can challenge Team GO Rocket and foil their plans."
+                ctrl.gameScreen = UIImage.init(named: "game1")
+            }
+        }
+    }
+    
+    
     
 }
 
